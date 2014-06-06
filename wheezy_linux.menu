@@ -1,0 +1,34 @@
+menu title Wheezy Linux Diskless VGA Squeeze64
+
+timeout 100
+
+label Top Menu
+	menu label ^Return to Top Menu
+	kernel ver/menu.c32
+	append pxelinux.cfg/default
+
+label vmlinuz-3.13.2-64net01 ttyS1
+	menu label vmlinuz-3.13.2-64net01 ttyS^1
+        kernel img/wheezy64/vmlinuz-3.13.2-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0 VERSION=3.13.2-64net01
+
+label vmlinuz-3.13.2-64net01 ttyS2
+	menu label vmlinuz-3.13.2-64net01 ttyS^2
+        kernel img/wheezy64/vmlinuz-3.13.2-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS2,19200n8 e1000e.CrcStripping=0 VERSION=3.13.2-64net01
+
+label vmlinuz-3.13.2-64net01 VGA
+	menu label vmlinuz-3.13.2-64net01 ^VGA
+        kernel img/wheezy64/vmlinuz-3.13.2-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.13.2-64net01
+
+label vmlinuz-3.9.4-64net01
+	menu label vmlinuz-3.9.4-64net01
+        kernel img/wheezy64/vmlinuz-3.9.4-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.9.4-64net01
+
+label vmlinuz-3.9.4-noedac
+	menu label vmlinuz-3.9.4-noedac
+        kernel img/wheezy64/vmlinuz-3.9.4-noedac
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.9.4-noedac
+

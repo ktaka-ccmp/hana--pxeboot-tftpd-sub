@@ -1,0 +1,14 @@
+menu title Wheezy Linux Diskless VGA Squeeze64
+
+timeout 100
+
+label Top Menu
+	menu label ^Return to Top Menu
+	kernel ver/menu.c32
+	append pxelinux.cfg/default
+
+label vmlinuz-3.9.4-64net01
+	menu label vmlinuz-3.9.4-64net01
+        kernel img/wheezy64/vmlinuz-3.9.4-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.9.4-64net01
+

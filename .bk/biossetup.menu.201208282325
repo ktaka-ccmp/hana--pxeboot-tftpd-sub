@@ -1,0 +1,70 @@
+menu title Bios Setup
+
+label Top Menu
+        menu label ^Return to Top Menu
+	kernel ver/menu.c32
+	append pxelinux.cfg/default
+
+label aptio_dmi
+	menu label ^AMI Aptio DMI
+	kernel img/dos/memdisk
+	append initrd=img/dos/dmi_aptio.img
+
+label award_dmi
+	menu label ^Award DMI
+	kernel img/dos/memdisk
+	append initrd=img/dos/dmi_award.img
+
+label adaptec
+	menu label Adaptec ^5805Z firm updator
+	kernel img/dos/memdisk
+	append initrd=img/dos/adaptec_5805z_18937.img.gz
+
+label ST9500620NS_SN02
+	kernel img/dos/memdisk
+	append initrd=img/dos/ST9500620NS_SN02.img.gz
+
+label freedos
+	menu label ^FreeDOS
+	kernel img/dos/memdisk
+	append initrd=img/dos/freedos.img.gz
+
+label X9IPMI
+	kernel img/dos/memdisk
+	append initrd=img/dos/X9IPMI_test.img.gz
+
+label x8sil
+	kernel img/dos/memdisk
+	append initrd=img/dos/X8SIL1.819.img
+
+label x8sieln4f
+	kernel img/dos/memdisk
+	append initrd=img/dos/X8SIE1.819.img
+
+label x8dtu
+	kernel img/dos/memdisk
+        append initrd=img/dos/X8DTU1.827_20111031.img
+
+label x8dah+f
+	kernel img/dos/memdisk
+	append initrd=img/dos/X8DAH1.803_20110811.img
+
+label x8dah+f-old
+	kernel img/dos/memdisk
+	append initrd=img/dos/X8DAH0903_20101123.img
+
+label x7spa-hf
+	kernel img/dos/memdisk
+	append initrd=img/dos/X7SPA1.914_20111209.img
+
+label New E1000PXESETUP - enable ROM
+        kernel img/dos/memdisk
+	append initrd=img/dos/BootUtil.img.gz
+
+label E1000PXESETUP - enable ROM
+        kernel img/dos/memdisk
+	append initrd=img/dos/INTELNICSETUP20090706.img
+#        append initrd=img/dos/INTELNICSETUP20081117.img
+
+
+

@@ -1,0 +1,79 @@
+menu title New Linux Diskless VGA Squeeze64
+
+timeout 100
+
+label Top Menu
+	menu label ^Return to Top Menu
+	kernel ver/menu.c32
+	append pxelinux.cfg/default
+
+label vmlinuz-3.5.3-kihira_clustcom_compile01
+	menu label vmlinuz-3.5.3-kihira_clustcom_compile01
+        kernel img/squeeze64/vmlinuz-3.5.3-kihira_clustcom_compile01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.5.3-kihira_clustcom_compile01
+
+label vmlinuz-3.5.3-kihira
+	menu label vmlinuz-3.5.3-kihira
+        kernel img/squeeze64/vmlinuz-3.5.3-kihira
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.5.3-kihira
+
+label vmlinuz-3.8.5-64net01
+	menu label vmlinuz-3.8.5-64net01
+        kernel img/squeeze64/vmlinuz-3.8.5-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.8.5-64net01
+
+label vmlinuz-3.7.10-64net01
+	menu label vmlinuz-3.7.10-64net01
+        kernel img/squeeze64/vmlinuz-3.7.10-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.7.10-64net01
+
+label vmlinuz-3.6.11-64net01
+	menu label vmlinuz-3.6.11-64net01
+        kernel img/squeeze64/vmlinuz-3.6.11-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.6.11-64net01
+
+label vmlinuz-3.5.7-64net01
+	menu label vmlinuz-3.5.7-64net01
+        kernel img/squeeze64/vmlinuz-3.5.7-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.5.7-64net01
+
+label vmlinuz-3.4.24-64net01
+	menu label vmlinuz-3.4.24-64net01
+        kernel img/squeeze64/vmlinuz-3.4.24-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.4.24-64net01
+
+label vmlinuz-3.2.1-64net01
+	menu label vmlinuz-3.2.1-64net01
+        kernel img/squeeze64/vmlinuz-3.2.1-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.2.1-64net01
+
+label vmlinuz-3.2.35-64net01
+	menu label vmlinuz-3.2.35-64net01
+        kernel img/squeeze64/vmlinuz-3.2.35-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.2.35-64net01
+
+label vmlinuz-3.1.10-64net01
+	menu label vmlinuz-3.1.10-64net01
+        kernel img/squeeze64/vmlinuz-3.1.10-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.1.10-64net01
+
+label vmlinuz-3.0.57-64net01
+	menu label vmlinuz-3.0.57-64net01
+        kernel img/squeeze64/vmlinuz-3.0.57-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.0.57-64net01
+
+label vmlinuz-2.6.39.4-64net01
+	menu label vmlinuz-2.6.39.4-64net01
+        kernel img/squeeze64/vmlinuz-2.6.39.4-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=2.6.39.4-64net01
+
+label vmlinuz-2.6.30.10-64net01
+	menu label vmlinuz-2.6.30.10-64net01
+        kernel img/squeeze64/vmlinuz-2.6.30.10-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=2.6.30.10-64net01
+
+label vmlinuz-2.6.27.57-64net01
+	menu label vmlinuz-2.6.27.57-64net01
+        kernel img/squeeze64/vmlinuz-2.6.27.57-64net01
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=2.6.27.57-64net01
+

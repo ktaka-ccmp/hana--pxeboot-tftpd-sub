@@ -1,0 +1,49 @@
+menu title Com32
+
+timeout 100
+
+label Main Menu
+        menu label ^Return to Main Menu
+        kernel ver/menu.c32
+        append pxelinux.cfg/default
+
+label hdt
+      menu label hdt
+      kernel ver/hdt.c32
+
+label serialinfo.c32
+      menu label serialinfo.c32
+      kernel ver/serialinfo.c32
+
+label fancyhello
+      menu label fancyhello
+      kernel ver/fancyhello.c32
+
+label hello
+      menu label hello
+      kernel ver/hello.c32
+
+label sysdump
+      menu label sysdump
+      kernel ver/sysdump.c32
+
+label simple
+      menu label simple
+      kernel ver/simple.c32
+
+label dmitest
+      menu label dmitest
+      kernel ver/dmitest.c32
+
+label kbdmap
+      menu label kbdmap
+      kernel ver/kbdmap.c32
+
+label keytest
+      menu label keytest
+      kernel ver/keytest.c32
+
+label reboot
+      menu label reboot
+      kernel ver/reboot.c32
+

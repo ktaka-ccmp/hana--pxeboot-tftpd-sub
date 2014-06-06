@@ -1,0 +1,26 @@
+label com32
+      menu label  ^Com32
+      kernel ver/menu.c32
+      append sub/com32.menu
+
+label Linux Diskless
+      menu label  ^Linux Diskless
+      kernel ver/menu.c32
+      append sub/linux.menu
+
+label Bios Setup
+      menu label  ^Bios Setup
+      kernel ver/menu.c32
+      append sub/biossetup.menu
+
+label Linux Installer
+      menu label  Linux ^Installer
+      kernel ver/menu.c32
+      append sub/linuxinstaller.menu
+
+label Memtest
+	menu label ^Memtest
+	kernel ver/menu.c32
+	append sub/memtest.menu
+
+

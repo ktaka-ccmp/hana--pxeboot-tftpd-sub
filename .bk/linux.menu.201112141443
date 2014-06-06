@@ -1,0 +1,67 @@
+menu title Linux Diskless
+
+timeout 100
+
+label Main Menu
+	menu label ^Return to Main Menu
+	kernel ver/menu.c32
+	append pxelinux.cfg/default
+
+label sol64 squeeze ttyS1
+	menu default
+        kernel img/squeeze64/linux
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0
+
+label sol64 squeeze ttyS2
+	menu default
+        kernel img/squeeze64/linux
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS2,19200n8 e1000e.CrcStripping=0
+
+label vga64 squeeze
+        kernel img/squeeze64/linux
+        append vga=normal initrd=img/squeeze64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0
+
+label vga32 squeeze
+        kernel img/squeeze32/linux
+        append vga=normal initrd=img/squeeze32/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0
+
+label sol64 lenny
+        kernel img/lenny64/linux
+        append vga=normal initrd=img/lenny64/initrd root=/dev/rd/0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0
+
+label vga64 lenny
+        kernel img/lenny64/linux
+        append vga=normal initrd=img/lenny64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0
+
+label sol64 ttyS2 lenny
+        kernel img/lenny64/linux
+        append vga=normal initrd=img/lenny64/initrd root=/dev/rd/0 rw panic=10 console=tty0 console=ttyS2,19200n8 e1000e.CrcStripping=0
+
+label sol32 lenny
+        kernel img/lenny32/linux
+        append vga=normal initrd=img/lenny32/initrd root=/dev/rd/0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0
+
+label vga32 lenny
+        kernel img/lenny32/linux
+        append vga=normal initrd=img/lenny32/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 
+
+label sol64 etch
+        kernel img/diag64/linux
+        append vga=normal initrd=img/diag64/initrd root=/dev/rd/0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0
+
+label vga64 etch
+        kernel img/diag64/linux
+        append vga=normal initrd=img/diag64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0
+
+label sol32
+        kernel img/diag/linux
+        append vga=normal initrd=img/diag/initrd root=/dev/rd/0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0
+
+label vga32
+        kernel img/diag/linux
+        append vga=normal initrd=img/diag/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0
+
+label vga64 custom lenny
+        kernel img/custom64/linux
+        append vga=normal initrd=img/custom64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0
+

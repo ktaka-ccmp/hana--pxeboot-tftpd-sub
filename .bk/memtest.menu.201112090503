@@ -1,0 +1,71 @@
+menu title Memtest 
+
+timeout 100
+
+label Main Menu
+	menu label ^Return to Main Menu
+	kernel ver/menu.c32
+	append pxelinux.cfg/default
+
+label memtest
+        kernel img/memtest/memtest
+
+label p4.20 no serail
+	menu label memtest86+420
+	kernel img/memtest/memtest86+420
+
+label p4.20 ttyS0
+	menu label memtest86+420-ttyS0
+	kernel img/memtest/memtest86+420-ttyS0
+
+label p4.20 ttyS1
+	menu label memtest86+420-ttyS1
+	kernel img/memtest/memtest86+420-ttyS1
+
+label p4.20 ttyS2
+	menu label memtest86+420-ttyS2
+	kernel img/memtest/memtest86+420-ttyS2
+
+label p4.10 
+	menu label memtest86+4.10 
+	kernel img/memtest/memtest86+-4.10
+
+label p4.10 ttyS2
+	menu label memtest86+4.10 ttyS2
+	kernel img/memtest/memtest86+-4.10-ttyS2
+
+label p4.00 ttyS0
+	menu label memtest86+4.00 ttyS^0
+	kernel img/memtest/memtest86+-4.00-ttyS0
+
+label p4.00 ttyS1
+	menu label memtest86+4.00 ttyS^1
+	kernel img/memtest/memtest86+-4.00-ttyS1
+
+label p4.00 ttyS2
+	menu label memtest86+4.00 ttyS^2
+	kernel img/memtest/memtest86+-4.00-ttyS2
+
+label p1.65
+	kernel img/memtest/memtest86+-1.65
+
+label p1.70
+	kernel img/memtest/memtest86+-1.70
+
+label p2.11
+	kernel img/memtest/memtest86+-2.11
+
+label 3.2
+	kernel img/memtest/memtest86-3.2
+
+label 3.5
+	kernel img/memtest/memtest86-3.5
+
+label mitake
+	kernel img/memtest/memtest_mitake
+
+label comb_mitake
+#	menu default
+	menu label comb^mitake
+	kernel img/memtest/memtest_comb
+

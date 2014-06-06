@@ -1,0 +1,31 @@
+menu title Linux Installer
+
+label Top Menu
+        menu label ^Return to Top Menu
+	kernel ver/menu.c32
+	append pxelinux.cfg/default
+
+label cent63
+        kernel img/centos/6.3-x86_64/vmlinuz
+        append vga=normal initrd=img/centos/6.3-x86_64/initrd.img panic=10 text console=tty0 
+
+label cent51
+        kernel img/centos/5.1/vmlinuz
+        append vga=normal initrd=img/centos/5.1/initrd.img root=/dev/rd/0 rw panic=10 console=tty0 console=ttyS1,19200n8
+
+label cent52
+        kernel img/centos/5.2/vmlinuz
+        append vga=normal initrd=img/centos/5.2/initrd.img panic=10 console=tty0 console=ttyS1,19200n8
+
+label cent53
+        kernel img/centos/5.3-i386/vmlinuz
+        append vga=normal initrd=img/centos/5.3-i386/initrd.img panic=10 text console=tty0 console=ttyS1,19200n8
+
+label debian-installer
+        kernel img/debian/linux
+	append vga=normal initrd=img/debian/initrd.gz panic=10 
+
+label lenny32
+        kernel img/debian/lenny32/linux
+	append vga=normal initrd=img/debian/lenny32/initrd.gz panic=10 
+
