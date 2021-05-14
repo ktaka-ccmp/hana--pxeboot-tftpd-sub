@@ -1,4 +1,5 @@
 menu title Bios Setup
+#timeout 50
 
 label Top Menu
         menu label ^Return to Top Menu
@@ -6,6 +7,7 @@ label Top Menu
 	append pxelinux.cfg/default
 
 label ezm8_aptio_dmi
+#        menu default
 	menu label ^EZM8_AMI Aptio DMI
 	kernel img/dos/memdisk
 	append initrd=img/dos/dmi_aptio_ezm8.img

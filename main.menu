@@ -3,6 +3,23 @@ label com32
       kernel ver/menu.c32
       append sub/com32.menu
 
+label Stretch Linux Diskless
+#      menu default
+      menu label  ^Stretch Linux Diskless
+      kernel ver/menu.c32
+      append sub/stretch_linux.menu
+
+label Buster Linux Diskless
+      menu default
+      menu label  ^Buster Linux Diskless
+      kernel ver/menu.c32
+      append sub/buster_linux.menu
+
+label Jessie Linux Diskless
+      menu label  ^Jessie Linux Diskless
+      kernel ver/menu.c32
+      append sub/jessie_linux.menu
+
 label Wheezy Linux Diskless
       menu label  ^Wheezy Linux Diskless
       kernel ver/menu.c32
@@ -19,6 +36,7 @@ label Linux Diskless
       append sub/linux.menu
 
 label Bios Setup
+#      menu default
       menu label  ^Bios Setup
       kernel ver/menu.c32
       append sub/biossetup.menu
@@ -29,8 +47,13 @@ label Linux Installer
       append sub/linuxinstaller.menu
 
 label Memtest
+#      menu default
 	menu label ^Memtest
 	kernel ver/menu.c32
 	append sub/memtest.menu
 
+label Moriya
+	menu label Mo^riya
+	kernel ver/menu.c32
+	append ../moriya/main.menu
 

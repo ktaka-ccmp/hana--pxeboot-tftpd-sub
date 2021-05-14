@@ -1,0 +1,35 @@
+menu title Buster Linux Diskless VGA
+
+timeout 100
+
+label Top Menu
+	menu label ^Return to Top Menu
+	kernel c32/menu.c32
+	append pxelinux.cfg/default
+
+label vmlinuz-5.12.3-64net01 ttyS1
+	menu default
+	menu label vmlinuz-5.12.3-64net01 ttyS^1
+        kernel img/buster64/vmlinuz-5.12.3-64net01
+        append vga=normal initrd=img/buster64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,115200n8 net.ifnames=0 biosdevname=0 VERSION=5.12.3-64net01 
+
+label vmlinuz-5.12.3-64net01 VGA
+	menu label vmlinuz-5.12.3-64net01 ^VGA
+        kernel img/buster64/vmlinuz-5.12.3-64net01
+        append vga=normal initrd=img/buster64/initrd root=/dev/rd0 rw panic=10 console=tty0 net.ifnames=0 biosdevname=0 VERSION=5.12.3-64net01
+
+label vmlinuz-5.4.14-64net01 ttyS1
+	menu label vmlinuz-5.4.14-64net01 ttyS1
+        kernel img/buster64/vmlinuz-5.4.14-64net01
+        append vga=normal initrd=img/buster64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,115200n8 net.ifnames=0 biosdevname=0 VERSION=5.4.14-64net01 
+
+label vmlinuz-5.4.14-64net01 VGA
+	menu label vmlinuz-5.4.14-64net01 VGA
+        kernel img/buster64/vmlinuz-5.4.14-64net01
+        append vga=normal initrd=img/buster64/initrd root=/dev/rd0 rw panic=10 console=tty0 net.ifnames=0 biosdevname=0 VERSION=5.4.14-64net01
+
+label vmlinuz-5.9.9-64net01 VGA
+	menu label vmlinuz-5.9.9-64net01 ^VGA
+        kernel img/buster64/vmlinuz-5.9.9-64net01
+        append vga=normal initrd=img/buster64/initrd root=/dev/rd0 rw panic=10 console=tty0 net.ifnames=0 biosdevname=0 VERSION=5.9.9-64net01
+
