@@ -5,6 +5,18 @@ label Top Menu
 	kernel ver/menu.c32
 	append pxelinux.cfg/default
 
+label cent7
+        kernel img/centos/7-x86_64/vmlinuz
+        append vga=normal initrd=img/centos/7-x86_64/initrd.img ip=dhcp inst.xdriver=vesa nomodeset inst.repo=http://mirror.centos.org/centos/7/os/x86_64/
+
+label cent7.1
+        kernel img/centos/7.1-x86_64/vmlinuz
+        append vga=normal initrd=img/centos/7.1-x86_64/initrd.img ip=dhcp inst.xdriver=vesa nomodeset inst.repo=http://mirror.centos.org/centos/7.1.1503/os/x86_64/
+
+label cent65
+        kernel img/centos/6.5-x86_64/vmlinuz
+        append vga=normal initrd=img/centos/6.5-x86_64/initrd.img panic=10 text console=tty0 
+
 label cent63
         kernel img/centos/6.3-x86_64/vmlinuz
         append vga=normal initrd=img/centos/6.3-x86_64/initrd.img panic=10 text console=tty0 
@@ -36,4 +48,13 @@ label squeeze_amd64_megaraid
 label wheezy_amd64
         kernel img/debian/wheezy_amd64/linux
 	append vga=normal initrd=img/debian/wheezy_amd64/initrd.gz panic=10 
+
+label jessie_amd64
+        kernel img/debian/jessie_amd64/linux
+	append vga=normal initrd=img/debian/jessie_amd64/initrd.gz panic=10 
+
+label devuan_jessie_amd64
+	kernel img/devuan/jessie_amd64/debian-installer/amd64/linux
+        append vga=788 initrd=img/devuan/jessie_amd64/debian-installer/amd64/initrd.gz --- quiet 
+
 
