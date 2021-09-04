@@ -7,6 +7,57 @@ label Top Menu
 	kernel ver/menu.c32
 	append pxelinux.cfg/default
 
+label vmlinuz-3.16.48-64net01 VGA
+	menu label vmlinuz-3.16.48-64net01 VGA
+        kernel img/wheezy64/vmlinuz-3.16.48-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.16.48-64net01
+
+label vmlinuz-3.16.48-64net01 ttyS1
+	menu label vmlinuz-3.1^6.48-64net01 ttyS1
+        kernel img/wheezy64/vmlinuz-3.16.48-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0 VERSION=3.16.48-64net01
+
+label vmlinuz-3.16.48-64net01-usb02 ttyS1
+	menu label vmlinuz-3.16.48-64net01-usb02 ttyS1
+        kernel img/wheezy64/vmlinuz-3.16.48-64net01-usb02
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0 VERSION=3.16.48-64net01-usb02
+
+label vmlinuz-3.16.48-64net01-nousb ttyS1
+	menu label vmlinuz-3.16.48-64net01-nousb ttyS1
+        kernel img/wheezy64/vmlinuz-3.16.48-64net01-nousb
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0 VERSION=3.16.48-64net01-nousb
+
+label vmlinuz-3.16.35-64net01 ttyS1
+	menu label vmlinuz-3.16.35-64net01 ttyS1
+        kernel img/wheezy64/vmlinuz-3.16.35-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0 VERSION=3.16.35-64net01
+
+label vmlinuz-3.16.7-64net01 ttyS1
+	menu label vmlinuz-3.16.7-64net01 ttyS1
+        kernel img/wheezy64/vmlinuz-3.16.7-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0 VERSION=3.16.7-64net01
+
+label vmlinuz-3.17.2-64net01 ttyS1
+	menu default
+	menu label vmlinuz-3.17.2-64net01 ttyS1
+        kernel img/wheezy64/vmlinuz-3.17.2-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,19200n8 e1000e.CrcStripping=0 VERSION=3.17.2-64net01
+
+label vmlinuz-3.17.2-64net01 VGA
+	menu label vmlinuz-3.17.2-64net01 ^VGA
+        kernel img/wheezy64/vmlinuz-3.17.2-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.17.2-64net01
+
+label vmlinuz-3.17.0-64net01 VGA
+	menu label vmlinuz-3.17.0-64net01 ^VGA
+        kernel img/wheezy64/vmlinuz-3.17.0-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.17.0-64net01
+
+label vmlinuz-3.13.11-64net01 VGA
+	menu label vmlinuz-3.13.11-64net01 ^VGA
+        kernel img/wheezy64/vmlinuz-3.13.11-64net01
+        append vga=normal initrd=img/wheezy64/initrd root=/dev/rd0 rw panic=10 console=tty0 e1000e.CrcStripping=0 VERSION=3.13.11-64net01
+
 label vmlinuz-3.13.2-64net01 ttyS1
 	menu label vmlinuz-3.13.2-64net01 ttyS^1
         kernel img/wheezy64/vmlinuz-3.13.2-64net01
