@@ -7,6 +7,27 @@ label Top Menu
 	kernel ver/menu.c32
 	append pxelinux.cfg/default
 
+label memtest86 VGA
+        menu label memtest86
+        kernel img/memtest/memtest86-usb.img
+
+label p5.31 VGA
+	menu label memtest86+-5.31b
+	kernel img/memtest/memtest86+-5.31b
+
+label p5.31 ttyS0-115200
+	menu label memtest86+-5.31b-ttyS0-115200
+	kernel img/memtest/memtest86+-5.31b-ttyS0-115200
+
+label p5.31 ttyS1-115200
+	menu default
+	menu label memtest86+-5.31b-ttyS1-115200
+	kernel img/memtest/memtest86+-5.31b-ttyS1-115200
+
+label p5.31 ttyS2-115200
+	menu label memtest86+-5.31b-ttyS2-115200
+	kernel img/memtest/memtest86+-5.31b-ttyS2-115200
+
 label memtest
         kernel img/memtest/memtest
 
@@ -35,10 +56,12 @@ label p4.20 ttyS0
 	kernel img/memtest/memtest86+420-ttyS0
 
 label p4.20 ttyS1
+#        menu default
 	menu label memtest86+420-ttyS^1-19200
 	kernel img/memtest/memtest86+420-ttyS1
 
 label p4.20 ttyS2
+#        menu default
 	menu label memtest86+420-ttyS^2-19200
 	kernel img/memtest/memtest86+420-ttyS2
 
