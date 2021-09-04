@@ -1,0 +1,36 @@
+menu title Stretch Linux Diskless VGA
+
+timeout 100
+
+label Top Menu
+	menu label ^Return to Top Menu
+	kernel ver/menu.c32
+	append pxelinux.cfg/default
+
+label vmlinuz-5.4.6-64net01 VGA
+	menu label vmlinuz-5.4.6-64net01 ^VGA
+        kernel img/stretch64/vmlinuz-5.4.6-64net01
+        append vga=normal initrd=img/stretch64/initrd root=/dev/rd0 rw panic=10 console=tty0 VERSION=5.4.6-64net01
+
+label vmlinuz-4.15.7-64net01 VGA
+	menu label vmlinuz-4.15.7-64net01 ^VGA
+        kernel img/stretch64/vmlinuz-4.15.7-64net01
+        append vga=normal initrd=img/stretch64/initrd root=/dev/rd0 rw panic=10 console=tty0 VERSION=4.15.7-64net01
+
+label vmlinuz-4.15.7-64net01 ttyS1
+	menu label vmlinuz-4.15.7-64net01 ttyS^1
+        kernel img/stretch64/vmlinuz-4.15.7-64net01
+        append vga=normal initrd=img/stretch64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS1,19200n8 VERSION=4.15.7-64net01
+
+label vmlinuz-4.15.7-64net01 ttyS2
+	menu label vmlinuz-4.15.7-64net01 ttyS^2
+        kernel img/stretch64/vmlinuz-4.15.7-64net01
+        append vga=normal initrd=img/stretch64/initrd root=/dev/rd0 rw panic=10 console=tty0 console=ttyS2,19200n8 VERSION=4.15.7-64net01
+
+
+label vmlinuz-3.12.74-db(KLab) VGA
+        menu label vmlinuz-3.12.74-db ^KLab
+        kernel img/stretch64/vmlinuz-3.12.74-db
+        append vga=normal initrd=img/stretch64/initrd root=/dev/rd0 rw panic=10 console=tty0 VERSION=3.12.74-db
+        #append vga=normal initrd=img/stretch64/initrd-net.img.moriya.2 root=/dev/rd0 rw panic=10 console=tty0 VERSION=3.12.74-db
+
