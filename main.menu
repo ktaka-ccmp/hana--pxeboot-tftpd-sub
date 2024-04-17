@@ -16,10 +16,16 @@ label Buster Linux Diskless
       append sub/buster_linux.menu
 
 label Bullseye Linux Diskless
-      menu default
+#      menu default
       menu label  ^Bullseye Linux Diskless
       kernel ver/menu.c32
       append sub/bullseye_linux.menu
+
+label Bookworm Linux Diskless
+      menu default
+      menu label  ^Bookworm Linux Diskless
+      kernel ver/menu.c32
+      append sub/bookworm_linux.menu
 
 label Jessie Linux Diskless
       menu label  ^Jessie Linux Diskless
