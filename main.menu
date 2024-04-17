@@ -10,10 +10,16 @@ label Stretch Linux Diskless
       append sub/stretch_linux.menu
 
 label Buster Linux Diskless
-      menu default
+#      menu default
       menu label  ^Buster Linux Diskless
       kernel ver/menu.c32
       append sub/buster_linux.menu
+
+label Bullseye Linux Diskless
+      menu default
+      menu label  ^Bullseye Linux Diskless
+      kernel ver/menu.c32
+      append sub/bullseye_linux.menu
 
 label Jessie Linux Diskless
       menu label  ^Jessie Linux Diskless

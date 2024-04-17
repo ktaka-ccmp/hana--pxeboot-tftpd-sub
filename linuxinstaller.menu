@@ -58,3 +58,12 @@ label devuan_jessie_amd64
         append vga=788 initrd=img/devuan/jessie_amd64/debian-installer/amd64/initrd.gz --- quiet 
 
 
+label bullsye_amd64
+        kernel img/debian/bullseye_amd64/linux
+	append vga=normal initrd=img/debian/bullseye_amd64/initrd.gz panic=10 
+
+label bullseye_amd64_2
+        menu label ^Bullseye
+	kernel ver/menu.c32
+	append img/debian/bullseye_amd64/pxelinux.cfg/default
+
